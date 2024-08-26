@@ -1,7 +1,7 @@
 package com.example.ecommerce_app_firebase.domain.entities.user
 
 data class DetailsUserEntity(
-    val id: Int,
+    val id: String,
     val name: String,
     val email: String,
     val phone: String,

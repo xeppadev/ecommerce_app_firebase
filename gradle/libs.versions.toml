@@ -6,3 +6,13 @@ org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.re
 
 
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+[libraries]
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version = "1.15.1" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version = "2.11.0" }
+dagger = { group = "com.google.dagger", name = "dagger", version = "2.52" }
+com-google-dagger-hilt-android-gradle-plugin = { group = "com.google.dagger.hilt.android", name = "com.google.dagger.hilt.android.gradle.plugin", version = "2.52" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version = "2.52" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.2.0" }
+kjwt-core = { group = "io.github.nefilim.kjwt", name = "kjwt-core", version = "0.9.0" }
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version = "1.0.1" }
+kjwt-jwks = { group = "io.github.nefilim.kjwt", name = "kjwt-jwks", version = "0.9.0" }
