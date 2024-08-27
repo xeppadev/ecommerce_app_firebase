@@ -12,15 +12,15 @@ class LocalDataSourceImpl @Inject constructor( private val databaseAccess: Datab
         return databaseAccess.getCartByUserId(userId)
     }
 
-    override suspend fun insertUserCartToDb(userCartEntity: DetailsCartEntity) {
+    override suspend fun insertCartDetailsToDb(userCartEntity: DetailsCartEntity) {
         return  databaseAccess.insertUserCart(userCartEntity)
     }
 
-    override suspend fun deleteUserCartItemFromDb(userCartEntity: DetailsCartEntity) {
+    override suspend fun deleteCartDetailsItemFromDb(userCartEntity: DetailsCartEntity) {
         return  databaseAccess.deleteUserCartItem(userCartEntity)
     }
 
-    override suspend fun updateUserCartItemFromDb(userCartEntity: DetailsCartEntity) {
+    override suspend fun updateCartDetailsItemFromDb(userCartEntity: DetailsCartEntity) {
         return databaseAccess.updateUserCartItem(userCartEntity)
     }
 

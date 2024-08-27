@@ -9,15 +9,22 @@ interface LocalRepository {
 
     suspend fun getCartsByUserIdFromDb(userId: String): Flow<NetworkResponseState<List<DetailsCartEntity>>>
 
-    suspend fun insertUserCartToDb(detailsCartEntity: DetailsCartEntity)
+    suspend fun insertCartDetailsToDb(detailsCartEntity: DetailsCartEntity)
 
 
-    suspend fun deleteUserCart(detailsCartEntity: DetailsCartEntity)
+    suspend fun deleteCartDetails(detailsCartEntity: DetailsCartEntity)
 
-    suspend fun updateUserCart(detailsCartEntity: DetailsCartEntity)
+    suspend fun updateCartDetails(detailsCartEntity: DetailsCartEntity)
 
     suspend fun getFavoriteProductsFromDb(userId: String): Flow<NetworkResponseState<List<FavoritesProductEntity>>>
 
 
     suspend fun insertFavoriteProductToDb(favoritesProductEntity: FavoritesProductEntity)
+
+
+    suspend fun deleteFavoriteProduct(favoritesProductEntity: FavoritesProductEntity)
+
+
+    suspend fun getBadgeCountFromDb(userId: String): Flow<NetworkResponseState<Int>>
+
 }

@@ -3,9 +3,9 @@ package com.example.ecommerce_app_firebase.domain.entities.product
 data class DetailsProductEntity(
     val id: Int,
     val title: String,
-    val price: Int,
+    val price: String,
     val description: String,
-    val category: String,
-    val image: String
+    val imageUrl: List<String>,
+    val rating: String,
 
 )

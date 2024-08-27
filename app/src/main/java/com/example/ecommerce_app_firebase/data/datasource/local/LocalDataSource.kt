@@ -6,11 +6,11 @@ import com.example.ecommerce_app_firebase.domain.entities.product.FavoritesProdu
 interface LocalDataSource {
     suspend fun getCartByUserIdFromDb(userId: String): List<DetailsCartEntity>
 
-    suspend fun insertUserCartToDb(userCartEntity: DetailsCartEntity)
+    suspend fun insertCartDetailsToDb(userCartEntity: DetailsCartEntity)
 
-    suspend fun deleteUserCartItemFromDb(userCartEntity: DetailsCartEntity)
+    suspend fun deleteCartDetailsItemFromDb(userCartEntity: DetailsCartEntity)
 
-    suspend fun updateUserCartItemFromDb(userCartEntity: DetailsCartEntity)
+    suspend fun updateCartDetailsItemFromDb(userCartEntity: DetailsCartEntity)
 
     suspend fun getFavoriteProductsFromDb(userId: String): List<FavoritesProductEntity>
 

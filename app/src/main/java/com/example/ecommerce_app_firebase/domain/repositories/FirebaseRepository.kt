@@ -1,20 +1,37 @@
 package com.example.ecommerce_app_firebase.domain.repositories
 
-import com.example.ecommerce_app_firebase.core.network.NetworkResponseState
-import com.example.ecommerce_app_firebase.domain.entities.product.DetailsProductEntity
-import com.example.ecommerce_app_firebase.domain.entities.product.ProductEntity
-import kotlinx.coroutines.flow.Flow
+import com.example.ecommerce_app_firebase.domain.entities.user.DetailsUserEntity
+import com.example.ecommerce_app_firebase.domain.entities.user.SignInUserEntity
 
 
 interface FirebaseRepository {
 
-    fun getProductsListFromApi(): Flow<NetworkResponseState<List<ProductEntity>>>
+    fun signUpWithFirebase(
+        user: DetailsUserEntity,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    )
 
-    fun getSingleProductByIdFromApi(productId: Int): Flow<NetworkResponseState<DetailsProductEntity>>
+    fun signInWithFirebase(
+        user: SignInUserEntity,
+        onSuccess: (DetailsUserEntity) -> Unit,
+        onFailure: (String) -> Unit
+    )
 
-    fun getProductsListBySearchFromApi(query: String): Flow<NetworkResponseState<List<ProductEntity>>>
+    fun forgotPassword(email: String, onSuccess: () -> Unit, onFailure: (String) -> Unit)
 
-    fun getAllCategoriesListFromApi(): Flow<NetworkResponseState<List<String>>>
 
-    fun getProductsListByCategoryNameFromApi(categoryName: String): Flow<NetworkResponseState<List<ProductEntity>>>
+    fun writeNewUserToFirebaseDatabase(
+        user: DetailsUserEntity,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+
+    fun readUserFromFirebaseDatabase(
+        userId: String,
+        onSuccess: (DetailsUserEntity) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
 }

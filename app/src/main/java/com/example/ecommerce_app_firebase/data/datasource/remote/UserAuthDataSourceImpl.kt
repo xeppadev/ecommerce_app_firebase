@@ -88,7 +88,7 @@ class UserAuthDataSourceImpl @Inject constructor(private val firebaseAuth: Fireb
             displayName = userMap["name"]
             photoUri = Uri.parse(userMap["image"])
         }
-
+         firebaseUser?.updateProfile(profileUpdate)
         collection.document(firebaseUser?.uid ?: "").set(userMap)
             .addOnSuccessListener {
                 onSuccess()
