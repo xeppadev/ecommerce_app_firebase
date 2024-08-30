@@ -16,3 +16,5 @@ hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-com
 kjwt-core = { group = "io.github.nefilim.kjwt", name = "kjwt-core", version = "0.9.0" }
 arrow-core = { group = "io.arrow-kt", name = "arrow-core", version = "1.0.1" }
 kjwt-jwks = { group = "io.github.nefilim.kjwt", name = "kjwt-jwks", version = "0.9.0" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version = "2.7.7" }
+material = { group = "androidx.compose.material", name = "material", version = "1.6.8" }
