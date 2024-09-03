@@ -11,6 +11,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,6 +48,15 @@ fun ProductCategory() {
     ) {
         itemsIndexed(itemList) { index, item ->
             FilterChip(selected = selectedStates[index],
+                colors = FilterChipDefaults.filterChipColors(
+                    disabledContainerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface,
+                    labelColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
+                    iconColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
+                    selectedContainerColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
+                    selectedLabelColor = androidx.compose.material3.MaterialTheme.colorScheme.onPrimary,
+
+                    selectedLeadingIconColor = androidx.compose.material3.MaterialTheme.colorScheme.onPrimary,
+                ),
                 onClick = { selectedStates[index] = !selectedStates[index] },
                 label = { Text(text = item) },
                 leadingIcon = {

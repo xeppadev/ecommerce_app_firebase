@@ -13,7 +13,6 @@ import androidx.compose.ui.unit.dp
 import com.example.ecommerce_app_firebase.ui.screens.cart.components.ButtonPay
 import com.example.ecommerce_app_firebase.ui.screens.cart.components.DeleteCart
 import com.example.ecommerce_app_firebase.ui.screens.cart.components.ProductCartList
-import com.example.ecommerce_app_firebase.ui.screens.home.components.TopAppBarHeader
 
 
 @Composable
@@ -31,7 +30,7 @@ fun CartScreen(){
         Column(modifier = Modifier
             .fillMaxSize()
             .padding(20.dp)) {
-          TopAppBarHeader()
+//          TopAppBarHeader()
             Spacer(modifier = Modifier.padding(5.dp))
             DeleteCart()
             Spacer(modifier = Modifier.padding(5.dp))

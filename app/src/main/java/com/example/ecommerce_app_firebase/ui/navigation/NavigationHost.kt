@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.ecommerce_app_firebase.ui.screens.auth.AuthRoute
 import com.example.ecommerce_app_firebase.ui.screens.cart.CartRoute
 import com.example.ecommerce_app_firebase.ui.screens.home.HomeRoute
 
@@ -26,6 +27,7 @@ fun NavigationHost(
 
         }
         composable(Profile.route) {
+            AuthRoute()
 
         }
     }

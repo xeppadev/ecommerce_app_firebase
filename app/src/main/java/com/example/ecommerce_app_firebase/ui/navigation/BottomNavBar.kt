@@ -43,14 +43,17 @@ fun BottomNavBar(
         content = {
             BottomNavigation(
                 modifier = modifier
-
+                      .padding(16.dp)
                     .clip(
                         RoundedCornerShape(
-                            topStart = 30.dp,
-                            topEnd = 30.dp
+                             30.dp,
+
+
                         )
                     )
-                    .height(60.dp),
+                    .height(60.dp)
+
+                ,
 
                 backgroundColor = MaterialTheme.colorScheme.surface
             ) {
